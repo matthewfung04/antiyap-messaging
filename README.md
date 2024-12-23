@@ -29,7 +29,7 @@ A real-time chat application enabling users to communicate within multiple chatr
 - **Secure Authentication:** User login and session management.
 - **WebSocket Integration:** Real-time message broadcasting and updates.
   
-###Demo
+### Demo
 
 ![AntiYap_AI_Demo](https://github.com/user-attachments/assets/4790068b-38c7-4731-958f-9867b128207a)
 
