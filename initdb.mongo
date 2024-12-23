@@ -1,0 +1,175 @@
+conn = new Mongo();
+db = conn.getDB("antiyap-messenger");
+db.dropDatabase();
+imgHost = '/';
+
+result = db.chatrooms.insertMany([
+	{
+		_id: 'room-1',
+		name: 'Everyone in CPEN',
+	    image: imgHost+'assets/everyone-icon.png'
+	},
+	{
+		_id: 'room-2',
+		name: 'Foodies only',
+	    image: imgHost+'assets/bibimbap.jpg'
+	},
+	{
+		_id: 'room-3',
+		name: 'Gamers unite',
+	    image: imgHost+'assets/minecraft.jpg'
+	},
+	{
+		_id: 'room-4',
+		name: 'Canucks Fans',
+	    image: imgHost+'assets/canucks.png'
+	}
+]);
+
+print(result);
+
+print(result);
+
+result = db.conversations.insertMany([
+	{
+		room_id: 'room-1',
+		timestamp: 1596233125227,
+		messages: [
+			{ username: 'Jason', text: 'Alright, team, let’s start working on the CPEN 320 assignment.' },
+			{ username: 'Bob', text: 'Sure, what section should we tackle first?' },
+			{ username: 'Charlie', text: 'Let’s divide and conquer. I’ll take the coding part.' },
+			{ username: 'Jason', text: 'Great. Bob, can you handle the writeup?' },
+			{ username: 'Bob', text: 'Got it. What about the diagrams?' },
+			{ username: 'Jason', text: 'I’ll do those. Let’s regroup in 30 minutes.' },
+			{ username: 'Charlie', text: 'Done with the code. Testing now.' },
+			{ username: 'Bob', text: 'Just finished the intro. Adding references now.' },
+			{ username: 'Jason', text: 'Nice progress. Let’s finalize by 8 PM.' },
+			{ username: 'Charlie', text: 'Found a bug. Fixing it now.' },
+			{ username: 'Bob', text: 'Let me know if you need help debugging.' },
+			{ username: 'Charlie', text: 'Thanks! It was a typo. Fixed.' },
+			{ username: 'Jason', text: 'Diagram done. Looks clean.' },
+			{ username: 'Bob', text: 'Sending the draft for review.' },
+			{ username: 'Charlie', text: 'Everything works! Pushing code to Git.' },
+			{ username: 'Jason', text: 'Final review: everything looks good.' },
+			{ username: 'Bob', text: 'Submitting now. Well done, team!' },
+			{ username: 'Charlie', text: 'Great work, everyone!' },
+			{ username: 'Jason', text: 'Next time, let’s not leave it to the last minute.' },
+			{ username: 'Bob', text: 'Agreed. Lesson learned!' },
+			{ username: 'Charlie', text: 'See you all in class tomorrow.' },
+			{ username: 'Jason', text: 'Goodnight, team!' },
+			{ username: 'Bob', text: 'Goodnight!' },
+			{ username: 'Charlie', text: 'Goodnight!' },
+			{ username: 'Jason', text: 'Let’s ace the next assignment too!' }
+		]
+	}
+]);
+
+print(result);
+
+result = db.conversations.insertMany([
+	{
+		room_id: 'room-2',
+		timestamp: 1596233125327,
+		messages: [
+			{ username: 'Jason', text: 'What’s everyone’s favorite comfort food?' },
+			{ username: 'Bob', text: 'Pizza. No competition.' },
+			{ username: 'Charlie', text: 'I’d say ramen. It’s warm and filling.' },
+			{ username: 'Jason', text: 'For me, it’s fried chicken. Crispy and juicy.' },
+			{ username: 'Bob', text: 'What about dessert? Cake or ice cream?' },
+			{ username: 'Charlie', text: 'Ice cream all the way. So many flavors!' },
+			{ username: 'Jason', text: 'Agreed. Matcha ice cream is my favorite.' },
+			{ username: 'Bob', text: 'How about we try cooking something together?' },
+			{ username: 'Charlie', text: 'Good idea! Let’s make sushi rolls.' },
+			{ username: 'Jason', text: 'I’m in. I’ll bring the seaweed and rice.' },
+			{ username: 'Bob', text: 'I’ll get the fish and avocado.' },
+			{ username: 'Charlie', text: 'I’ll handle the soy sauce and wasabi.' },
+			{ username: 'Jason', text: 'Can’t wait. This will be fun!' },
+			{ username: 'Bob', text: 'Maybe we should film it and upload it.' },
+			{ username: 'Charlie', text: 'Great idea. We could call it “Foodies Assemble.”' },
+			{ username: 'Jason', text: 'Haha, I like it. Let’s make it happen!' },
+			{ username: 'Bob', text: 'What other dishes should we try in the future?' },
+			{ username: 'Charlie', text: 'How about Korean BBQ? That would be epic.' },
+			{ username: 'Jason', text: 'Yes! I love bulgogi and kimchi.' },
+			{ username: 'Bob', text: 'Let’s plan that for next weekend.' },
+			{ username: 'Charlie', text: 'Sounds perfect. I’ll set a reminder.' },
+			{ username: 'Jason', text: 'This group always has the best ideas.' },
+			{ username: 'Bob', text: 'Food brings people together!' },
+			{ username: 'Charlie', text: 'Amen to that.' },
+			{ username: 'Jason', text: 'Alright, see you all at sushi night!' }
+		]
+	}
+]);
+
+print(result);
+
+result = db.conversations.insertMany([
+	{
+		room_id: 'room-3',
+		timestamp: 1596233125327,
+		messages: [
+			{ username: 'Jason', text: 'Who’s ready for a gaming marathon?' },
+			{ username: 'Bob', text: 'Me! Let’s do this.' },
+			{ username: 'Charlie', text: 'What game are we starting with?' },
+			{ username: 'Jason', text: 'Minecraft. We’re building a fortress.' },
+			{ username: 'Bob', text: 'Count me in. I’ll gather resources.' },
+			{ username: 'Charlie', text: 'I’ll handle the design. Let’s make it epic.' },
+			{ username: 'Jason', text: 'Anyone else joining us?' },
+			{ username: 'Bob', text: 'Let’s invite Alex. He’s great at mining.' },
+			{ username: 'Charlie', text: 'Good idea. I’ll send him a message.' },
+			{ username: 'Jason', text: 'Alright, let’s meet in the server at 8 PM.' },
+			{ username: 'Bob', text: 'Don’t forget to bring food in-game. We’ll need it.' },
+			{ username: 'Charlie', text: 'Noted. Let’s dominate tonight!' },
+			{ username: 'Jason', text: 'Ready to craft and conquer!' },
+			{ username: 'Bob', text: 'Let’s aim for the Ender Dragon this time.' },
+			{ username: 'Charlie', text: 'That’s ambitious, but I’m all in.' },
+			{ username: 'Jason', text: 'We’ve got this. Teamwork makes the dream work.' },
+			{ username: 'Bob', text: 'Remember to stay hydrated in real life too!' },
+			{ username: 'Charlie', text: 'Haha, true. Gaming fuel ready.' },
+			{ username: 'Jason', text: 'Alright, see you all online!' },
+			{ username: 'Bob', text: '8 PM sharp. Don’t be late!' },
+			{ username: 'Charlie', text: 'I’m already warming up my mouse hand.' },
+			{ username: 'Jason', text: 'This is going to be legendary.' },
+			{ username: 'Bob', text: 'Let’s set a new record tonight!' },
+			{ username: 'Charlie', text: 'For glory and loot!' },
+			{ username: 'Jason', text: 'Game on!' }
+		]
+	}
+]);
+
+print(result);
+
+result = db.conversations.insertMany([
+	{
+		room_id: 'room-4',
+		timestamp: 1596233125327,
+		messages: [
+			{ username: 'Jason', text: 'Did you all catch the Canucks game last night? That third-period goal was unreal!' },
+			{ username: 'Bob', text: 'Absolutely! Pettersson was in beast mode. That snipe was incredible.' },
+			{ username: 'Charlie', text: 'Don’t forget Demko. Some of those saves were out of this world. MVP performance.' },
+			{ username: 'Jason', text: 'Totally agree. If they keep playing like this, we’re looking at a strong playoff run.' },
+			{ username: 'Bob', text: 'Let’s hope so. We’ve been waiting for a season like this for years!' },
+			{ username: 'Charlie', text: 'We should go watch a game live sometime. Nothing beats the atmosphere of a packed arena.' },
+			{ username: 'Jason', text: 'I’m down. Let’s check the schedule and grab some tickets.' },
+			{ username: 'Bob', text: 'Sounds like a plan. Who’s bringing the foam fingers?' },
+			{ username: 'Charlie', text: 'Haha, I’ll take care of the foam fingers. Bob can bring the snacks.' },
+			{ username: 'Jason', text: 'Can’t wait. Let’s make sure to get good seats.' },
+			{ username: 'Bob', text: 'Center ice seats if we can afford them. Let’s splurge a little!' },
+			{ username: 'Charlie', text: 'True fans go all out. It’s worth it for the experience.' },
+			{ username: 'Jason', text: 'What’s everyone’s favorite moment from the Canucks this season?' },
+			{ username: 'Bob', text: 'That overtime win against the Flames was legendary.' },
+			{ username: 'Charlie', text: 'I’d say the comeback against Toronto. That was pure heart.' },
+			{ username: 'Jason', text: 'For me, it’s gotta be Demko’s shutout last month. Unreal.' },
+			{ username: 'Bob', text: 'Man, I can’t wait for the playoffs. Imagine if they face the Oilers.' },
+			{ username: 'Charlie', text: 'That would be intense. McDavid vs. Pettersson. A showdown for the ages.' },
+			{ username: 'Jason', text: 'We’d have to host a watch party for that series.' },
+			{ username: 'Bob', text: 'Absolutely. I’ll bring the drinks, and Charlie can bring the wings.' },
+			{ username: 'Charlie', text: 'Deal. Jason, you’re in charge of the big screen.' },
+			{ username: 'Jason', text: 'Done. Let’s hope they go all the way this year.' },
+			{ username: 'Bob', text: 'One step at a time. First, we need them to clinch that playoff spot.' },
+			{ username: 'Charlie', text: 'They’re almost there. Just a few more wins to seal the deal.' },
+			{ username: 'Jason', text: 'Go Canucks go!' }
+		]
+	}
+]);
+
+print(result);
