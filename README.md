@@ -30,7 +30,7 @@ A real-time chat application enabling users to communicate within multiple chatr
 - **WebSocket Integration:** Real-time message broadcasting and updates.
   
 ###Demo
-https://github.com/user-attachments/assets/d13f043e-a9ae-4afc-961c-5cbee9aadf73
+![AntiYap_AI_Demo](https://github.com/user-attachments/assets/4790068b-38c7-4731-958f-9867b128207a)
 
 ---
 
