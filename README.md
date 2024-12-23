@@ -28,6 +28,9 @@ A real-time chat application enabling users to communicate within multiple chatr
 - **Room Management:** Create and join chatrooms with custom names.
 - **Secure Authentication:** User login and session management.
 - **WebSocket Integration:** Real-time message broadcasting and updates.
+  
+###Demo
+https://github.com/user-attachments/assets/d13f043e-a9ae-4afc-961c-5cbee9aadf73
 
 ---
 
