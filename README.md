@@ -83,7 +83,7 @@ A real-time chat application enabling users to communicate within multiple chatr
    then type: load('initdb.mongo')
    then type: load('initUsers.mongo')
    
-3. **Run the server
+3. **Run the server**
 
    ```bash
    type in the terminal: nodemon server.js
